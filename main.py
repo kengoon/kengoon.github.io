@@ -23,8 +23,7 @@ def getBanner(url):
     metas = soup.find_all('meta')  #Get Meta og:image
     for m in metas:
         if m.get('property') == 'og:image':
-            banner = m.get('content')
-            return banner
+            return m.get('content')
 
 
 # color name to css color code list
